@@ -1,0 +1,33 @@
+TinyMce
+=======
+
+This plugin adapts the TinyMCE JavaScript library from Moxiecode Systems to a Ruby on Rails application. The TinyMCE
+version bundled with this plugin is Version 3.2.7 (2009-09-22).
+
+TinyMCE is a platform independent web based Javascript HTML WYSIWYG editor control released as Open Source under LGPL by
+Moxiecode Systems AB. It has the ability to convert HTML TEXTAREA fields or other HTML elements into editor instances.
+
+
+Usage Example
+=============
+
+Within your layout's HEAD element, add the following:
+
+<%=tiny_mce [:options => {...}]%>
+
+where :options is an optional hash containing TinyMCE configuration options.
+
+By default, all textareas on the affected views will be modified.
+You can also, optionally, add the following to a controller any time before the view is rendered:
+
+TinyMce.configuration do |config|
+    config[:theme] => "simple"
+    . . .
+end
+
+Rails Plugin Copyright (c) 2010 Colin MacKenzie IV, released under the MIT license
+    http://github.com/sinisterchipmunk/tiny_mce
+    
+TinyMCE is Copyright (c) 2003-2010 Moxiecode Systems, released under the GNU Public License 2.1 (GPL 2.1)
+    http://tinymce.moxiecode.com/
+
